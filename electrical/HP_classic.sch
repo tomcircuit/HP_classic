@@ -1,0 +1,365 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Classic HP Calculator Battery Pack"
+Date "2020-11-10"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery_Management:MCP73831-2-OT U1
+U 1 1 5FA2FB74
+P 4650 3600
+F 0 "U1" H 4400 3850 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 4650 4100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4700 3350 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 4500 3550 50  0001 C CNN
+	1    4650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5FA30285
+P 2500 3400
+F 0 "J1" H 2557 3867 50  0000 C CNN
+F 1 "USB_B_Micro" H 2557 3776 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105133-0001" H 2650 3350 50  0001 C CNN
+F 3 "~" H 2650 3350 50  0001 C CNN
+	1    2500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FA320F0
+P 4100 3950
+F 0 "R1" H 4170 3996 50  0000 L CNN
+F 1 "5.1K" H 4170 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4030 3950 50  0001 C CNN
+F 3 "~" H 4100 3950 50  0001 C CNN
+	1    4100 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FA32E41
+P 4650 4200
+F 0 "#PWR04" H 4650 3950 50  0001 C CNN
+F 1 "GND" H 4655 4027 50  0000 C CNN
+F 2 "" H 4650 4200 50  0001 C CNN
+F 3 "" H 4650 4200 50  0001 C CNN
+	1    4650 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5FA334E1
+P 4100 4200
+F 0 "#PWR03" H 4100 3950 50  0001 C CNN
+F 1 "GND" H 4105 4027 50  0000 C CNN
+F 2 "" H 4100 4200 50  0001 C CNN
+F 3 "" H 4100 4200 50  0001 C CNN
+	1    4100 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4200 4100 4100
+Wire Wire Line
+	4100 3800 4100 3700
+Wire Wire Line
+	4100 3700 4250 3700
+Wire Wire Line
+	4650 3900 4650 4200
+Wire Wire Line
+	5050 3700 5200 3700
+Wire Wire Line
+	4650 3200 4650 3300
+$Comp
+L power:GND #PWR02
+U 1 1 5FA361D6
+P 3600 4200
+F 0 "#PWR02" H 3600 3950 50  0001 C CNN
+F 1 "GND" H 3605 4027 50  0000 C CNN
+F 2 "" H 3600 4200 50  0001 C CNN
+F 3 "" H 3600 4200 50  0001 C CNN
+	1    3600 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3200 4650 3200
+Connection ~ 4650 3200
+Wire Wire Line
+	5050 3500 5700 3500
+$Comp
+L Device:C_Small C1
+U 1 1 5FA386FD
+P 3600 3700
+F 0 "C1" H 3692 3746 50  0000 L CNN
+F 1 "4.7uF" H 3692 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3600 3700 50  0001 C CNN
+F 3 "~" H 3600 3700 50  0001 C CNN
+	1    3600 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3200 3600 3600
+Wire Wire Line
+	5700 3200 6000 3200
+Wire Wire Line
+	5700 3200 5700 3500
+$Comp
+L power:GND #PWR05
+U 1 1 5FA3C234
+P 6000 4200
+F 0 "#PWR05" H 6000 3950 50  0001 C CNN
+F 1 "GND" H 6005 4027 50  0000 C CNN
+F 2 "" H 6000 4200 50  0001 C CNN
+F 3 "" H 6000 4200 50  0001 C CNN
+	1    6000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5FA3C240
+P 6000 3700
+F 0 "C2" H 6092 3746 50  0000 L CNN
+F 1 "4.7uF" H 6092 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6000 3700 50  0001 C CNN
+F 3 "~" H 6000 3700 50  0001 C CNN
+	1    6000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3600 6000 3200
+Wire Wire Line
+	2400 3800 2400 3900
+Wire Wire Line
+	2400 3900 2500 3900
+Wire Wire Line
+	2500 3900 2500 3800
+$Comp
+L power:GND #PWR01
+U 1 1 5FA3F829
+P 2500 4200
+F 0 "#PWR01" H 2500 3950 50  0001 C CNN
+F 1 "GND" H 2505 4027 50  0000 C CNN
+F 2 "" H 2500 4200 50  0001 C CNN
+F 3 "" H 2500 4200 50  0001 C CNN
+	1    2500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3900 2500 4100
+Connection ~ 2500 3900
+Wire Wire Line
+	2800 3200 3600 3200
+Connection ~ 3600 3200
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5FA46519
+P 6700 3700
+F 0 "J2" H 6780 3692 50  0000 L CNN
+F 1 "JST PH 2mm" H 6780 3601 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 6700 3700 50  0001 C CNN
+F 3 "~" H 6700 3700 50  0001 C CNN
+	1    6700 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5FA47437
+P 6500 4200
+F 0 "#PWR0101" H 6500 3950 50  0001 C CNN
+F 1 "GND" H 6505 4027 50  0000 C CNN
+F 2 "" H 6500 4200 50  0001 C CNN
+F 3 "" H 6500 4200 50  0001 C CNN
+	1    6500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4200 6500 3800
+Wire Wire Line
+	6500 3700 6500 3200
+Wire Wire Line
+	3600 3800 3600 4200
+Wire Wire Line
+	6000 3800 6000 4200
+Text Label 3300 3200 0    50   ~ 0
+VUSB
+Text Label 6150 3200 0    50   ~ 0
+VBAT
+Wire Wire Line
+	5200 4250 5500 4250
+Wire Wire Line
+	5500 4250 5500 4100
+Wire Wire Line
+	5200 3700 5200 3800
+Wire Wire Line
+	5200 4100 5200 4250
+Wire Wire Line
+	5500 3200 4650 3200
+Wire Wire Line
+	5500 3800 5500 3200
+$Comp
+L Device:R R2
+U 1 1 5FA33B5B
+P 5200 3950
+F 0 "R2" H 5270 3996 50  0000 L CNN
+F 1 "470" H 5270 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 3950 50  0001 C CNN
+F 3 "~" H 5200 3950 50  0001 C CNN
+	1    5200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT D1
+U 1 1 5FA329BC
+P 5500 3950
+F 0 "D1" V 5584 3832 50  0000 R CNN
+F 1 "LED" V 5493 3832 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5500 3950 50  0001 C CNN
+F 3 "~" H 5500 3950 50  0001 C CNN
+F 4 "CHARGE" V 5402 3832 50  0000 R CNN "Function"
+	1    5500 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 3100 5500 3200
+Connection ~ 5500 3200
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FA6481C
+P 5500 3100
+F 0 "TP1" H 5558 3218 50  0000 L CNN
+F 1 "VUSB" H 5558 3127 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 5700 3100 50  0001 C CNN
+F 3 "~" H 5700 3100 50  0001 C CNN
+	1    5500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5FA6BB86
+P 3150 4050
+F 0 "TP2" H 3208 4168 50  0000 L CNN
+F 1 "GND" H 3208 4077 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3350 4050 50  0001 C CNN
+F 3 "~" H 3350 4050 50  0001 C CNN
+	1    3150 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 2500 4100
+Wire Wire Line
+	2500 4100 2500 4200
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5FA5D61E
+P 7550 3800
+F 0 "J3" H 7700 3700 50  0000 C CNN
+F 1 "2.54mm R/A" H 7900 3800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 7550 3800 50  0001 C CNN
+F 3 "~" H 7550 3800 50  0001 C CNN
+	1    7550 3800
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FA5E111
+P 7350 4200
+F 0 "#PWR0102" H 7350 3950 50  0001 C CNN
+F 1 "GND" H 7355 4027 50  0000 C CNN
+F 2 "" H 7350 4200 50  0001 C CNN
+F 3 "" H 7350 4200 50  0001 C CNN
+	1    7350 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4200 7350 3800
+Wire Wire Line
+	6500 3200 7350 3200
+Wire Wire Line
+	7350 3200 7350 3700
+Connection ~ 6500 3200
+Wire Wire Line
+	6000 3200 6500 3200
+Connection ~ 6000 3200
+Wire Wire Line
+	2800 3600 2950 3600
+Wire Wire Line
+	2950 4100 2950 3600
+Wire Wire Line
+	2500 4100 2950 4100
+Wire Wire Line
+	2950 4100 3150 4100
+Wire Wire Line
+	3150 4100 3150 4050
+Connection ~ 2950 4100
+Wire Wire Line
+	2800 3400 2950 3400
+Wire Wire Line
+	2950 3400 2950 3500
+Wire Wire Line
+	2950 3500 2800 3500
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5FA6D864
+P 4700 6900
+F 0 "H1" H 4800 6946 50  0000 L CNN
+F 1 "MountingHole" H 4800 6855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2mm" H 4700 6900 50  0001 C CNN
+F 3 "~" H 4700 6900 50  0001 C CNN
+	1    4700 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5FA6EA95
+P 4700 7200
+F 0 "H3" H 4800 7246 50  0000 L CNN
+F 1 "MountingHole" H 4800 7155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2mm" H 4700 7200 50  0001 C CNN
+F 3 "~" H 4700 7200 50  0001 C CNN
+	1    4700 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5FA6FD8A
+P 5450 6900
+F 0 "H2" H 5550 6946 50  0000 L CNN
+F 1 "MountingHole" H 5550 6855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2mm" H 5450 6900 50  0001 C CNN
+F 3 "~" H 5450 6900 50  0001 C CNN
+	1    5450 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5FA7005B
+P 5450 7200
+F 0 "H4" H 5550 7246 50  0000 L CNN
+F 1 "MountingHole" H 5550 7155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2mm" H 5450 7200 50  0001 C CNN
+F 3 "~" H 5450 7200 50  0001 C CNN
+	1    5450 7200
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	6400 4000 8250 4000
+Wire Notes Line
+	8250 4000 8250 3450
+Wire Notes Line
+	8250 3450 6400 3450
+Wire Notes Line
+	6400 3450 6400 4000
+Text Notes 8350 3800 0    75   ~ 0
+Mounting Option:\nJ2 (JST) or J3 (Molex)
+Text Notes 3750 4800 0    75   ~ 0
+R1 = 5.1K sets\n200mA CC
+$EndSCHEMATC
