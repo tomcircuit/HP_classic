@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Classic HP Calculator Battery Pack"
 Date "2020-11-10"
-Rev ""
+Rev "1"
 Comp ""
 Comment1 ""
 Comment2 ""
