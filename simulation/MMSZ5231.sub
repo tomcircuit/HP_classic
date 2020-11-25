@@ -1,0 +1,14 @@
+[MMSZ5231B]
+*SRC=MMSZ5231B;DI_MMSZ5231B;Diodes;Zener <=10V; 5.10V  0.500W   Diodes Inc. 500 mW Zener
+*SYM=HZEN
+.SUBCKT DI_MMSZ5231B  1 2
+*        Terminals    A   K
+D1 1 2 DF                                           
+DZ 3 1 DR
+VZ 2 3 2.62
+.MODEL DF D ( IS=40.4p RS=34.9 N=1.10
++ CJO=132p VJ=0.750 M=0.330 TT=50.1n )
+.MODEL DR D ( IS=8.08f RS=13.1 N=3.00 )
+.ENDS
+
+=========================================================================================================

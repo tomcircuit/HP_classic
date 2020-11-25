@@ -1,0 +1,55 @@
+*model for MAX40200
+*version 1.1: 5/2019 
+.SUBCKT MAX40203 VDD GND OUT EN
+Dm vdd1 out1 DA
+Gag vdd1 gnd value={350n*V(sd1)*V(sd2)+150n*(1-V(sd1))}
+Gag1 vd gnd value={I(Vo2)*(V(sd2)-1)}
+Vvd vd 0 5
+.MODEL DA D(N=10m RS=0.02 IBV=1e-7 BV=8 IS=20p VJ=0.5)
+S_1 vdd vdd1 SD1 0 smod1
+.model smod1 VSWITCH (Ron=0.1 Roff=10meg Von=0.8 Voff=0.5)
+Eflg flg 0 value={if(V(vdd)>V(ot),5,0)}
+Eot ot 0 value={V(out)-20m}
+X_1 0 EN1 sd1 shdn
+Ret EN EN1 300
+Cet EN1 0 2.5u
+Rfa EN1 0 100
+S_2 out1 out2 SD2 0 smod2
+.model smod2 VSWITCH (Ron=0.1 Roff=10meg Von=0.8 Voff=0.5)
+S_3 out outx SD2 0 smod3
+Vo2 outx 0 0
+.model smod3 VSWITCH (Ron=10g Roff=6.6meg Von=0.8 Voff=0.5)
+S_4 out vdd SD2 0 smod4
+.model smod4 VSWITCH (Ron=10g Roff=20meg Von=0.8 Voff=0.5)
+X_2 0 flg sd2 shdn
+V1 out2 out 0m
+.ends
+**************************************************************************************
+.SUBCKT SHDN 18 91 cs
+**************************************************************************************
+V10 10 0 5
+E20 20 18 10 18 0.5
+Ecs cs 18 VALUE={V(96)-V(20)}
+*SHUTDOWN
+RSHIN 91 20 5000K
+ESH3 220 20 91 18 1
+RSHA 220 221 1K
+CSHA 221 20 32P
+ESH2 92 20 221 20 1
+RSH1 92 93 100
+VSH1 93 94 0V
+EHYS 95 94 POLY(2) 10 18 96 20 0 0 0 0 0.03
+RBL 94 20 10K  
+ESH1 95 20 10 18 0.11
+****
+*FSH1 20 96 Vsh1 1
+*CSH1 96 20 10P
+*DSH2 20 96 DA
+*DSH1 96 97 DA
+*VSH2 97 20 1V
+*RSH2 96 20 100K
+E96 96 18 value={if(I(vsh1)<0,2.5,3.5)}
+.MODEL DA D(N=10M)
+*.MODEL DA D
+.ends
+**************************************************************************************
