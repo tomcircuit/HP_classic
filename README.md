@@ -36,7 +36,7 @@ I wanted a 1S (3.7V) LiPo battery in the neighborhood of 1000mAhr that would fit
 
 I believe that a thicker battery could be used, because of the profile of the battery compartment cover. That might allow for a higher capacity battery, which would translate into longer running time. 
 
-**UPDATE**: I founda  1200mAhr LiPo battery in size "103040" that is just 2mm thicker. I've ordered some to try out.  20% more capacity is always good, right?
+**UPDATE**: I found a 1200mAhr LiPo battery in size "103040" that is just 2mm thicker. I've ordered some to try out.  20% more capacity is always good, right?
 
 ## Putting It All Together
 Pretty self-explanatory. I used 0805 size components to allow for easy hand-soldering. Note that D1 is an LED and is polarized, so pay attention to that. Soldering the USB connector requires a fine-tip iron and some patience. 
