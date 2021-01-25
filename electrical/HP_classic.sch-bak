@@ -444,7 +444,7 @@ Wire Notes Line
 Wire Notes Line
 	9550 4750 8550 4750
 Text Notes 8450 5550 0    50   ~ 0
-Z1 is necessary to limit voltage into\nMAX40203 below 6VDC max. rating.\nHP charger sources 50mA, and Vz of\n5.1V leads to 250mW PD in Z1.
+D2 is necessary to limit voltage into\nMAX40203 below 6VDC max. rating.\nHP charger sources 50mA, and Vz of\n5.1V leads to 250mW PD in Z1.
 Text Notes 7050 4450 0    50   ~ 0
 JP2 - ENABLE solder bridge\nshort to tie EN to VDD\nMAX40203 datasheet states\nthat EN can float high, but the\nsimulation said otherwise.
 Wire Wire Line
